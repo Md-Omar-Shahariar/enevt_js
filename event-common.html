@@ -7,9 +7,9 @@
     <title>Common Event</title>
   </head>
   <body>
-    <input type="text" name="" value="" />
-    <button>Update</button>
     <p id="clicking-method"></p>
+    <input id="name-field" type="text" name="" value="" />
+    <button id="update-name">Update</button>
     <button onclick="handleJustFunctionClick()">Just Function</button>
     <button id="handle-event">Direct Function</button>
 
@@ -23,6 +23,14 @@
         .addEventListener("click", function () {
           const p = document.getElementById("clicking-method");
           p.innerText = "Set by direct Function";
+        });
+      document
+        .getElementById("update-name")
+        .addEventListener("click", function () {
+          const nameField = document.getElementById("name-field");
+          const p = document.getElementById("clicking-method");
+          p.innerText = nameField.value;
+          nameField.value = "";
         });
     </script>
   </body>
