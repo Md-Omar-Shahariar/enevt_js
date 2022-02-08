@@ -7,15 +7,23 @@
     <title>Common Event</title>
   </head>
   <body>
+    <input type="text" name="" value="" />
+    <button>Update</button>
     <p id="clicking-method"></p>
     <button onclick="handleJustFunctionClick()">Just Function</button>
-    <button>Direct Function</button>
+    <button id="handle-event">Direct Function</button>
 
     <script>
       function handleJustFunctionClick() {
         const p = document.getElementById("clicking-method");
-        p.innerHTML = "Set By Using Function";
+        p.innerText = "Set By Using Function";
       }
+      document
+        .getElementById("handle-event")
+        .addEventListener("click", function () {
+          const p = document.getElementById("clicking-method");
+          p.innerText = "Set by direct Function";
+        });
     </script>
   </body>
 </html>
