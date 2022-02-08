@@ -24,4 +24,7 @@ document.body.style.backgroundColor = 'goldenrod'
 const hotPink = document.getElementById('make-hotpink')
 hotPink.addEventListener('click', function(){
 document.body.style.backgroundColor = 'hotpink'
-})      
+})    
+document.getElementById('make-lightblue').addEventListener('click', function(){
+    document.body.style.backgroundColor = "lightblue"
+})  
